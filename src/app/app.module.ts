@@ -1,18 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+
+import { appRoutes } from '../routes';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SectionSalesComponent } from './sections/section-sales/section-sales.component';
+import { SectionOrderComponent } from './sections/section-order/section-order.component';
+import { SectionHealthComponent } from './sections/section-health/section-health.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    SectionSalesComponent,
+    SectionOrderComponent,
+    SectionHealthComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
