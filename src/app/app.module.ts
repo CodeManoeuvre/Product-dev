@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { appRoutes } from '../routes';
+// import { NgChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -10,6 +11,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SectionSalesComponent } from './sections/section-sales/section-sales.component';
 import { SectionOrderComponent } from './sections/section-order/section-order.component';
 import { SectionHealthComponent } from './sections/section-health/section-health.component';
+import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
+import { LineChartComponent } from './charts/line-chart/line-chart.component';
+import { PieChartComponent } from './charts/pie-chart/pie-chart.component';\
+
 
 
 @NgModule({
@@ -19,11 +24,15 @@ import { SectionHealthComponent } from './sections/section-health/section-health
     SidebarComponent,
     SectionSalesComponent,
     SectionOrderComponent,
-    SectionHealthComponent
+    SectionHealthComponent,
+    BarChartComponent,
+    LineChartComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
